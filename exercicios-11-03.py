@@ -107,5 +107,38 @@ print(area)
 # ---------- Exercício 14 ------------
 print("\nExercício 14")
 
+a = float(input("Digite o primeiro número:"))
+b = float(input("Digite o segundo número:"))
 
+a,b = b,a
+
+print(f"\nEste é o novo valor de a: {a}")
+print(f"\nEste é o novo valor de b: {b}")
+
+#------------------------------------
+# ---------- Exercício 15 ------------
+print("\nExercício 15")
+
+nota1 = float(input("\nEscreva a primeira nota:"))
+nota2 = float(input("\nEscreva a segunda nota:"))
+nota3 = float(input("\nEscreva a terceira nota:"))
+
+ponderada= ((nota1*2)+(nota2*3)+(nota3*5))/10
+
+print(f"\nO resultado da média ponderada é: {ponderada}")
+
+#------------------------------------
+# ---------- Exercício 16 ------------
+import math
+print("\nExercício 16")
+
+x1 = float(input("\nEscreva a primeira cordenada x:"))
+y1 = float(input("\nEscreva a primeira cordenada y:"))
+x2 = float(input("\nEscreva a segunda cordenada x:"))
+y2 = float(input("\nEscreva a segunda cordenada y:"))
+
+euclidiana = math.sqrt((x2-x1)**2 + (y2-y1)**2)
+
+
+print(f"\nA distância entre dois pontos no gráfico é: {euclidiana}")
 
