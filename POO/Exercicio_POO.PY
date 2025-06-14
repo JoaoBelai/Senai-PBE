@@ -135,9 +135,21 @@ class RelatiorioBiblioteca:
                 disponiveis.append(titulo)
                 contador += 1
         print(f"Itens: {contador}")
-        print(disponiveis)
+        str_disponiveis = " ".join(disponiveis)
+        print(str_disponiveis)
     
+    def gerar_relatorio_emprestimo(self):
+        print("\nRelatório de Itens Emprestados:")
+        contador = 0
+        for item in self.biblioteca.dicionario_itens.values():
+            if not item.disponivel:
+                contador += 1
 
+        porcentagem = (contador*100)/len(self.biblioteca.dicionario_itens)
+        porcentagem = str(porcentagem)
+        contador = str(contador)
+        str_indisponivel = "Itens Indisponíveis: " + contador + ", " + porcentagem + "% dos itens totais"
+        print(str_indisponivel)
 
 
 
@@ -174,3 +186,4 @@ biblioteca1.adicionar_item(livro1)
 relatorio = RelatiorioBiblioteca(biblioteca1)
 relatorio.gerar_relatorio_completo()
 relatorio.gerar_relatorio_disponibilidade()
+relatorio.gerar_relatorio_emprestimo()
